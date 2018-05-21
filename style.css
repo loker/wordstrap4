@@ -1,0 +1,13 @@
+/*
+Theme Name: WordStrap4
+Theme URI: http://github.com/loker/wordstrap4
+Author: Koray Löker
+Author URI: http://radiobrecht.org
+Description: Wordpress _s theme base meets Boostrap4
+Version: 1.0.0
+License: GNU General Public License v3 or later
+License URI: LICENSE
+Text Domain: wordstrap4
+Tags: bootstrap, mobile-first
+*/
+@import "css/bootstrap.min.css";
