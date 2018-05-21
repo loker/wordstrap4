@@ -44,6 +44,54 @@ if ( ! function_exists( 'wordstrap4_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'wordstrap4_setup' );
 
+// donence Custom Post Type
+function donence_init() {
+    // set up donence labels
+    $labels = array(
+        'name' => 'Dönenceler',
+        'singular_name' => 'Dönence',
+        'add_new' => 'Dönence ekle',
+        'add_new_item' => 'Dönence ekle',
+        'edit_item' => 'Dönence düzenle',
+				'new_item' => 'Yeni Dönence',
+        'all_items' => 'Bütün Dönenceler',
+        'view_item' => 'Dönence Görüntüle',
+        'search_items' => 'Dönence Ara',
+        'not_found' =>  'Dönence bulunamadı',
+        'not_found_in_trash' => 'Çöpte Dönence yok',
+        'parent_item_colon' => '',
+        'menu_name' => 'Dönenceler',
+    );
+
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'donence'),
+        'query_var' => true,
+				'menu_position' => 5,
+        'menu_icon' => 'dashicons-images-alt2',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'revisions',
+            'thumbnail',
+            'page-attributes'
+        )
+    );
+    register_post_type( 'donence', $args );
+
+    // register taxonomy
+    register_taxonomy('donence_category', 'donence', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'donence-category' )));
+}
+add_action( 'init', 'donence_init' );
+
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -85,8 +133,7 @@ function wordstrap4_scripts() {
 	wp_enqueue_style( 'wordstrap4-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'wordstrap4-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180521', true );
 	wp_enqueue_script( 'wordstrap4-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180521', true );
-	wp_enqueue_script( 'bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '4', true );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4', true );
+	wp_enqueue_script( 'bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), '20180521', true );
 }
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
