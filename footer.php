@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="d-flex justify-content-center mt-2 bg-dark">
+	<footer id="colophon" class="d-flex justify-content-center mt-2 bg-dark text-white">
 		2018
 	</footer><!-- #colophon -->
 </div><!-- #page -->
