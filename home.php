@@ -24,9 +24,7 @@
 	              	<div class="carousel-caption">
 	                	<a href="' . get_permalink() . '"><h1>';
 										the_title();
-										echo '</h1>';
-										the_excerpt();
-										echo '</a>
+										echo '</h1></a>
 	              	</div>
 	            	</div>
 	          	</div>';
