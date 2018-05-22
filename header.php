@@ -27,19 +27,24 @@
 	<header id="masthead" class="site-header">
 		<nav class="navbar navbar-expand-md navbar-light bg-light">
 			<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-				<?php if ( function_exists( 'the_custom_logo' ) ) {
-    			the_custom_logo();
-				} ?>
+				<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
+				<img src="<?php echo $image[0]; ?>">
  			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>			
 			<?php
-					wp_nav_menu( array(
-							'menu'              => 'menu',
-							'theme_location'    => 'primary',
-							'depth'             => 2,
-							'menu_class'        => 'nav',
-							'fallback_cb'       => 'wp_page_menu',
-							'walker'            => new WP_Bootstrap_Navwalker())
-					);
+			wp_nav_menu( array(
+				'theme_location'  => 'primary',
+				'depth'	          => 2,
+				'container'       => 'div',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'navbarNav',
+				'menu_class'      => 'navbar-nav mr-auto',
+				'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+				'walker'          => new WP_Bootstrap_Navwalker(),
+			) );
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

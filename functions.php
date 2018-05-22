@@ -10,7 +10,7 @@ if ( ! function_exists( 'wordstrap4_setup' ) ) :
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'wordstrap4' ),
+			'primary' => esc_html__( 'Primary Menu', 'wordstrap4' ),
 		) );
 		add_theme_support( 'html5', array(
 			'search-form',
