@@ -15,6 +15,9 @@ Tags: bootstrap, mobile-first
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
+h1,h2,h3,h4,p,a,a:hover{
+    font-family: 'Montserrat', sans-serif;
+}
 .carousel {
   margin-bottom: 4rem;
 }
