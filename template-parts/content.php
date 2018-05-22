@@ -11,7 +11,7 @@
 
 	<?php wordstrap4_post_thumbnail(); ?>
 
-	<div class="entry-content e">
+	<div class="entry-content p-2 mt-1">
 		<?php
 		the_content( sprintf(
 			wp_kses(
