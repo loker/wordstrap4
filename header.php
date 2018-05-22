@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header">
 		<nav class="navbar navbar-expand-md navbar-light bg-light">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 				<?php if ( function_exists( 'the_custom_logo' ) ) {
     			the_custom_logo();
 				} ?>
