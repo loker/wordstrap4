@@ -27,7 +27,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'wordstrap4' ); ?></a>
+	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'İçeriğe geç', 'wordstrap4' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<nav class="navbar navbar-expand-md navbar-light bg-white">
@@ -44,7 +44,7 @@
 				'theme_location'  => 'primary',
 				'depth'	          => 2,
 				'container'       => 'div',
-				'container_class' => 'collapse navbar-collapse',
+				'container_class' => 'collapse navbar-collapse pt-4 pl-2',
 				'container_id'    => 'navbarNav',
 				'menu_class'      => 'navbar-nav mr-auto',
 				'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
