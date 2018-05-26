@@ -6,30 +6,23 @@
 			    // the query
 			    $the_query = new WP_Query( array(
 			      'category_name' => 'program',
-			      'posts_per_page' => 3,
+			      'posts_per_page' => 1,
 			    ));
 			 ?>
 
-			 <?php if ( $the_query->have_posts() ) : ?>
-			   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			 <?php if ( $the_query->have_posts() ) :
+			    while ( $the_query->have_posts() ) : $the_query->the_post();
 
-			     <?php the_title(); ?>
-			     <?php the_content(); ?>
+				 get_template_part( 'template-parts/content', get_post_type() );
 
-			   <?php endwhile; ?>
-			   <?php wp_reset_postdata(); ?>
-
-			 <?php else : ?>
-			   <p><?php __('No News'); ?></p>
-			 <?php endif; ?>
-
+				endwhile;
+			  endif; ?>
 			 <ul>
 <?php
 
-global $post;
 $args = array( 'offset'=> 1, 'category' => 2 );
 
-$myposts = get_posts( $args );
+$the_query = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 	<li>
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
