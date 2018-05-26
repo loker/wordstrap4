@@ -19,7 +19,7 @@
 					while ( $query->have_posts() ) : $query->the_post(); $lop++;
 								$class = ($lop == 1) ? 'class="carousel-item active"' : 'class="carousel-item"';
 								echo '<div '.$class.'>';
-								echo '<img src="'.get_the_post_thumbnail_url().'">';
+								echo '<img src="'.get_the_post_thumbnail_url().'" class="img-fluid">';
 								echo '<div class="container">
 	              	<div class="carousel-caption">
 	                	<a href="' . get_permalink() . '"><h1>';

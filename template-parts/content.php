@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header mt-2">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -9,7 +9,7 @@
 ?>
 	</header><!-- .entry-header -->
 
-	<?php wordstrap4_post_thumbnail(); ?>
+	<?php the_post_thumbnail('large'); ?>
 
 	<div class="entry-content p-2 mt-1">
 		<?php

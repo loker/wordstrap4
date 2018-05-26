@@ -22,7 +22,7 @@ h1,h2,h3,h4,p,a,a:hover{
   margin-bottom: 4rem;
 }
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 1rem;
   z-index: 10;
 }
 .carousel-item {
@@ -35,6 +35,7 @@ h1,h2,h3,h4,p,a,a:hover{
   left: 0;
   min-width: 100%;
   height: 32rem;
+      object-fit: cover;
 }
 
 @media (min-width: 40em) {
