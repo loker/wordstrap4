@@ -120,3 +120,46 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// DEL WPEMOJI
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+// Close comments on the front-end
+function wordstrap4_disable_comments_status() {
+	return false;
+}
+add_filter('comments_open', 'wordstrap4_disable_comments_status', 20, 2);
+add_filter('pings_open', 'wordstrap4_disable_comments_status', 20, 2);
+// Hide existing comments
+function wordstrap4_disable_comments_hide_existing_comments($comments) {
+	$comments = array();
+	return $comments;
+}
+add_filter('comments_array', 'wordstrap4_disable_comments_hide_existing_comments', 10, 2);
+// Remove comments page in menu
+function wordstrap4_disable_comments_admin_menu() {
+	remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'wordstrap4_disable_comments_admin_menu');
+// Redirect any user trying to access comments page
+function wordstrap4_disable_comments_admin_menu_redirect() {
+	global $pagenow;
+	if ($pagenow === 'edit-comments.php') {
+		wp_redirect(admin_url()); exit;
+	}
+}
+add_action('admin_init', 'wordstrap4_disable_comments_admin_menu_redirect');
+// Remove comments metabox from dashboard
+function wordstrap4_disable_comments_dashboard() {
+	remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+}
+add_action('admin_init', 'wordstrap4_disable_comments_dashboard');
+// Remove comments links from admin bar
+function wordstrap4_disable_comments_admin_bar() {
+	if (is_admin_bar_showing()) {
+		remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+	}
+}
+add_action('init', 'wordstrap4_disable_comments_admin_bar');
+
