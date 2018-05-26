@@ -18,6 +18,11 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<?php wp_head(); ?>
+	<meta property="og:url"           content="<?php echo get_permalink(); ?>" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Ahmet Şık" />
+  <meta property="og:description"   content="HDP İstanbul 2. Bölge Milletvekili Adayı" />
+  <meta property="og:image"         content="<?php echo (get_the_post_thumbnail_url()!='') ? get_the_post_thumbnail_url() : 'https://ahmetinadresi.org/wp-content/uploads/2018/05/ahmet_kimdir.jpg'; ?>" />
 </head>
 
 <body <?php body_class(); ?>>
