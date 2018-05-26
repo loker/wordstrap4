@@ -43,6 +43,11 @@ if ( ! function_exists( 'wordstrap4_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'wordstrap4_setup' );
+function modify_read_more_link() {
+    return '<a class="more-link" href="' . get_permalink() . '">Devamı için tıklayın</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -162,4 +167,3 @@ function wordstrap4_disable_comments_admin_bar() {
 	}
 }
 add_action('init', 'wordstrap4_disable_comments_admin_bar');
-
