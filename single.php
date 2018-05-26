@@ -21,7 +21,7 @@
 				get_template_part( 'template-parts/content', 'none' );
 			endif;
 			?>
-		</div><!---->
+		</div>
 
 <?php
 get_sidebar();

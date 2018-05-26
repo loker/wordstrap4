@@ -8,9 +8,9 @@
 		endif;
 ?>
 	</header><!-- .entry-header -->
-
-	<?php the_post_thumbnail('large'); ?>
-
+	<div>
+	<?php the_post_thumbnail('large', array('class' => 'img-fluid mx-auto d-block')); ?>
+	</div>
 	<div class="entry-content p-2 mt-1">
 		<?php
 		the_content( sprintf(

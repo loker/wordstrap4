@@ -47,7 +47,11 @@ function modify_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '">Devamı için tıklayın</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
-
+function filter_excerpt() {
+    $excerpt = get_the_excerpt();
+    $excerpt = apply_filters( 'the_excerpt', $excerpt );
+    return $excerpt;
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
