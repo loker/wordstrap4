@@ -21,7 +21,7 @@
 	<meta property="og:url"           content="<?php echo get_permalink(); ?>" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="<?php echo get_the_title(); ?>" />
-  <meta property="og:description"   content="<?php echo get_the_excerpt(); ?>" />
+  <meta property="og:description"   content="<?php echo (get_the_excerpt()!='') ? get_the_excerpt() : 'İstanbul 2. Bölge Milletvekili Adayı'; ?>" />
   <meta property="og:image"         content="<?php echo (get_the_post_thumbnail_url()!='') ? get_the_post_thumbnail_url() : 'https://ahmetinadresi.org/wp-content/uploads/2018/05/ahmet_kimdir.jpg'; ?>" />
 </head>
 
