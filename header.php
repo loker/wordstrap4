@@ -30,7 +30,7 @@
 	<a class="skip-link sr-only" href="#content"><?php esc_html_e( 'İçeriğe geç', 'wordstrap4' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav class="navbar navbar-expand-md navbar-light bg-white">
+		<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
 			<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
 				<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
