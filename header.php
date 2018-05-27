@@ -18,6 +18,9 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<?php wp_head(); ?>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@ahmetin_adresi" />
+	<meta name="twitter:creator" content="@sahmetsahmet" />	
 	<meta property="og:url"           content="<?php echo get_permalink(); ?>" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="<?php echo get_the_title(); ?>" />
