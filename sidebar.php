@@ -12,7 +12,9 @@
 				</a>
 			</section>
 			<?php endwhile; ?>
-
+			<div><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.jpg" alt="ahmet şık facebook sayfası linki" /></a></div>
+			<div><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.jpg" alt="ahmet şık twitter hesabı linki" /></a></div>
+			<div><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.jpg" alt="ahmet şık youtube kanalı linki" /></a></div>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</aside><!-- #secondary -->
 	</div>
