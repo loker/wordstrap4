@@ -26,6 +26,21 @@
   <meta property="og:title"         content="<?php echo get_the_title(); ?>" />
   <meta property="og:description"   content="<?php echo (get_the_excerpt()!='') ? get_the_excerpt() : 'İstanbul 2. Bölge Milletvekili Adayı'; ?>" />
   <meta property="og:image"         content="<?php echo (get_the_post_thumbnail_url()!='') ? get_the_post_thumbnail_url(get_the_ID(),'medium') : 'https://ahmetinadresi.org/wp-content/uploads/2018/05/ahmet_kimdir-768x448.jpg'; ?>" />
+	<!-- Matomo -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//ahmetinadresi.org/piwik/";
+	    _paq.push(['setTrackerUrl', u+'piwik.php']);
+	    _paq.push(['setSiteId', '1']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Matomo Code -->
 </head>
 
 <body <?php body_class(); ?>>
