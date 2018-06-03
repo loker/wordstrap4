@@ -12,9 +12,10 @@
 				</a>
 			</section>
 			<?php endwhile; ?>
-			<div><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.jpg" alt="ahmet şık facebook sayfası linki" /></a></div>
-			<div><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.jpg" alt="ahmet şık twitter hesabı linki" /></a></div>
-			<div><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.jpg" alt="ahmet şık youtube kanalı linki" /></a></div>
+			<div><a href="https://www.facebook.com/ahmetinadresi.org/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.jpg" alt="ahmet şık facebook sayfası linki" /></a></div>
+			<div><a href="https://www.instagram.com/ahmetin_adresi/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.jpg" alt="ahmet şık instagram hesabı linki" /></a></div>
+			<div><a href="https://twitter.com/ahmetin_adresi" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.jpg" alt="ahmet şık twitter hesabı linki" /></a></div>
+			<div><a href="https://www.youtube.com/channel/UC40m24EicjICCsvnOy60k8w" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.jpg" alt="ahmet şık youtube kanalı linki" /></a></div>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		</aside><!-- #secondary -->
 	</div>
